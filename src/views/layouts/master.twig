@@ -91,6 +91,55 @@
             --color-primary-reverse: {{ theme.color.reverse_text }};
         }
     </style>
+    <style>
+    /* 1. تأثير الزجاج (Glassmorphism) */
+    /* نطبقه على الهيدر، كروت المنتجات، والقوائم الجانبية */
+    header.main-header, 
+    .s-product-card-entry, 
+    .s-block-container,
+    .s-cart-summary {
+        background: rgba(255, 255, 255, 0.65) !important;
+        backdrop-filter: blur(15px) saturate(180%);
+        -webkit-backdrop-filter: blur(15px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05) !important;
+    }
+
+    /* 2. زوايا ناعمة (Soft Edges) */
+    /* نزيد من انحناء الزوايا لتعطي طابع عصري */
+    .s-product-card-entry, 
+    .s-slider-container img, 
+    .s-button-element,
+    .s-product-card-image img,
+    .s-block-container {
+        border-radius: 20px !important;
+    }
+
+    /* 3. التفاعل البصري (Interaction) */
+    /* ارتفاع الكرت وتوهج بسيط عند تمرير الماوس */
+    .s-product-card-entry {
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+    }
+
+    .s-product-card-entry:hover {
+        transform: translateY(-10px); /* يرتفع للأعلى */
+        box-shadow: 0 20px 40px rgba(108, 92, 231, 0.1) !important; /* ظل ملون خفيف */
+        border-color: #6c5ce7 !important; /* لون البراند عند التحويم */
+    }
+
+    /* 4. تنسيق التسليم الفوري والسريع */
+    /* نجعل الشارة (Badge) تبدو ككبسولة ملونة وجذابة */
+    .s-product-card-badge {
+        background: linear-gradient(135deg, #00f3ff 0%, #6c5ce7 100%) !important;
+        color: #ffffff !important;
+        padding: 5px 15px !important;
+        border-radius: 50px !important; /* شكل دائري */
+        font-weight: bold !important;
+        font-size: 0.85rem !important;
+        box-shadow: 0 4px 10px rgba(0, 243, 255, 0.3);
+        border: none !important;
+    }
+</style>
     {# tracking services, custom css feature. #}
     {% hook 'head:end' %}
 </head>

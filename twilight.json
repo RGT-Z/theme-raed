@@ -1,10 +1,10 @@
 {
     "name": {
-        "ar": "رائد",
-        "en": "Theme Raed"
+        "ar": "عالمك الرقمي",
+        "en": "world digital"
     },
     "repository": "https://github.com/SallaApp/theme-raed",
-    "author_email": "support@salla.sa",
+    "author_email": "moseb20004@gmail.com",
     "features": [
         "mega-menu",
         "fonts",
@@ -1085,4 +1085,68 @@
         "ar": "مجموعة كبيرة من المزايا لدعم تجارتك وتقديم تجربة تسوق مثيرة لعملائك",
         "en": "A wide range of features to support your business and provide an exciting shopping experience for your customers"
     }
+}
+{
+  "key": "a7f4b8d2-9e41-4f4a-b123-6d8f9c1e5a77",
+  "title": {
+    "ar": "مميزات المتجر",
+    "en": "Store Features"
+  },
+  "icon": "sicon-shield-check",
+  "path": "home.store-features-custom",
+  "image": "https://via.placeholder.com/1200x800.png?text=Store+Features",
+  "fields": [
+    {
+      "type": "string",
+      "id": "title",
+      "label": "عنوان القسم",
+      "multilanguage": true,
+      "format": "text",
+      "value": {
+        "ar": "لماذا تختارنا؟",
+        "en": "Why Choose Us?"
+      }
+    },
+    {
+      "id": "features",
+      "type": "collection",
+      "format": "collection",
+      "label": "قائمة المميزات",
+      "item_label": "ميزة",
+      "minLength": 1,
+      "maxLength": 6,
+      "fields": [
+        {
+          "type": "string",
+          "id": "features.icon",
+          "label": "الأيقونة",
+          "format": "icon",
+          "value": "sicon-star"
+        },
+        {
+          "type": "string",
+          "id": "features.title",
+          "label": "عنوان الميزة",
+          "multilanguage": true,
+          "format": "text"
+        },
+        {
+          "type": "string",
+          "id": "features.description",
+          "label": "وصف الميزة",
+          "multilanguage": true,
+          "format": "textarea"
+        }
+      ]
+    }
+  ]
+}
+{
+  "components": {
+    "custom-banner": {
+      "name": "بانر مخصص",
+      "path": "home.custom-banner",
+      "icon": "fas fa-image"
+    }
+  }
 }

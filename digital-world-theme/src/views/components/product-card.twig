@@ -1,0 +1,36 @@
+<div class="product-card">
+  <div class="product-img">
+    <div class="product-img-bg"></div>
+    {# عرض صورة المنتج من سلة #}
+    <img src="{{ product.image.url }}" alt="{{ product.image.alt }}" style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 1;">
+    
+    <div class="product-preview">
+      <div class="preview-title">✦ نظرة سريعة ✦</div>
+      <div class="preview-feature">منتج رقمي موثوق</div>
+    </div>
+  </div>
+  
+  <div class="product-body">
+    <div class="product-name"><a href="{{ product.url }}" style="color: inherit; text-decoration: none;">{{ product.name }}</a></div>
+    <div class="product-desc">{{ product.subtitle }}</div>
+    
+    <div class="product-price">
+      <span class="price-main">{{ product.price|money }}</span>
+      {% if product.has_sale_price %}
+        <span class="price-old">{{ product.regular_price|money }}</span>
+      {% endif %}
+    </div>
+    
+    <div class="product-actions" style="display: flex; gap: 10px;">
+      {# مكون زر الإضافة للسلة الرسمي من سلة (يعمل بالـ Ajax بدون تحديث الصفحة) #}
+      <salla-add-product-button 
+        class="btn-buy" 
+        style="flex: 1;"
+        product-id="{{ product.id }}"
+        product-status="{{ product.status }}"
+        product-type="{{ product.type }}">
+        <span style="font-family: 'Cairo', sans-serif; font-weight: 800; color: var(--obsidian);">🛒 أضف للسلة</span>
+      </salla-add-product-button>
+    </div>
+  </div>
+</div>

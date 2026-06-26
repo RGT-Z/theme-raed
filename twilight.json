@@ -166,9 +166,42 @@
         {
             "type": "boolean",
             "icon": "sicon-toggle-off",
+            "label": "إظهار مسار التنقل في صفحة المنتج",
+            "description": null,
+            "id": "product_show_breadcrumbs",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "إظهار مسار التنقل في صفحة قائمة المنتجات",
+            "description": null,
+            "id": "product_index_show_breadcrumbs",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
             "label": "تفعيل إشعار الإضافة للسلة المحسن",
             "description": null,
             "id": "enable_add_product_toast",
+            "format": "switch",
+            "required": false,
+            "value": true,
+            "selected": true
+        },
+        {
+            "type": "boolean",
+            "icon": "sicon-toggle-off",
+            "label": "إظهار زر \"أعلمني عند التوفر\" في بطاقة المنتج",
+            "description": "يظهر زر إشعار التوفر في بطاقات المنتجات التي نفذت كميتها",
+            "id": "notify_when_available_in_card",
             "format": "switch",
             "required": false,
             "value": true,
@@ -248,6 +281,7 @@
             "icon": "sicon-image-carousel",
             "path": "home.enhanced-slider",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/images-slider-enhancement.png?v=1.1",
+            "is_default": true,
             "fields": [
                 {
                     "type": "static",
@@ -349,6 +383,7 @@
             "icon": "sicon-layout-grid-rearrange",
             "path": "home.main-links",
             "image": "https://cdn.salla.network/images/themes/raed/main-links-with-bg.jpg?v=1.1",
+            "is_default": true,
             "fields": [
                 {
                     "type": "static",
@@ -538,6 +573,11 @@
                                     "value": "products"
                                 },
                                 {
+                                    "label": "منتجات مع وسم",
+                                    "key": "products_tags",
+                                    "value": "products_tags"
+                                },
+                                {
                                     "label": "تصنيف",
                                     "key": "categories",
                                     "value": "categories"
@@ -690,6 +730,11 @@
                             "value": "products"
                         },
                         {
+                            "label": "منتجات مع وسم",
+                            "key": "products_tags",
+                            "value": "products_tags"
+                        },
+                        {
                             "label": "تصنيف",
                             "key": "categories",
                             "value": "categories"
@@ -747,6 +792,7 @@
             "icon": "sicon-image",
             "path": "home.enhanced-square-banners",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/square-images.png?v=1.1",
+            "is_default": true,
             "fields": [
                 {
                     "type": "static",
@@ -833,6 +879,11 @@
                                     "label": "منتج",
                                     "key": "products",
                                     "value": "products"
+                                },
+                                {
+                                    "label": "منتجات مع وسم",
+                                    "key": "products_tags",
+                                    "value": "products_tags"
                                 },
                                 {
                                     "label": "تصنيف",
@@ -923,6 +974,7 @@
             "icon": "sicon-award-ribbon",
             "path": "home.brands",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/brands.png?v=1.1",
+            "is_default": true,
             "fields": [
                 {
                     "type": "static",
@@ -972,6 +1024,7 @@
             "icon": "sicon-chat-bubbles",
             "path": "home.custom-testimonials",
             "image": "https://cdn.salla.network/images/themes/raed/preview-images/custom-testimonials.png?v=1.1",
+            "is_default": true,
             "fields": [
                 {
                     "type": "static",
